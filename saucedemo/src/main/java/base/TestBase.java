@@ -53,10 +53,10 @@ public class TestBase {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 			
-//			e_driver = new EventFiringWebDriver(driver);
-//			eventListiner = new WebEventListener();
-//			e_driver.register(eventListiner);
-//			driver=e_driver;
+			e_driver = new EventFiringWebDriver(driver);
+			eventListiner = new WebEventListener();
+			e_driver.register(eventListiner);
+			driver=e_driver;
 			
 			driver.get(url);
 			driver.manage().window().maximize();
